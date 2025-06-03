@@ -1,11 +1,11 @@
 
 import express, { Router } from 'express';
 
-import { registerUser } from '../../../controllers/globals/auth/authController';
+import AuthRouter from '../../../controllers/globals/auth/authController';
 
 const router: Router = express.Router();
 
-router.route("\register").post(registerUser)
+router.route("/register").post(AuthRouter.registerUser)
 
 
 export default router;
